@@ -1,0 +1,117 @@
+/* Base element styling + Lenis wiring + shared primitives */
+
+/* ---- Lenis smooth scroll ---- */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* ---- App shell ---- */
+#root {
+  isolation: isolate;
+}
+
+.app-main {
+  min-height: 60vh;
+}
+
+/* ---- Typographic helpers ---- */
+.overline {
+  font-size: var(--fs-overline);
+  letter-spacing: var(--tracking-overline);
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--c-ink-2);
+}
+
+.u-tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- Skip link ---- */
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 12px 18px;
+  background: var(--c-ink);
+  color: var(--c-bg);
+  font-size: var(--fs-sm);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  transform: translateY(-120%);
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline-offset: -2px;
+}
+
+/* ---- Page container ---- */
+.container {
+  width: 100%;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container--wide {
+  max-width: none;
+  padding-inline: var(--gutter);
+}
+
+/* ---- Section rhythm ---- */
+.section {
+  padding-block: var(--section-y);
+}
+
+.section--tight {
+  padding-block: clamp(3rem, 7vw, 6rem);
+}
+
+/* ---- Dark section ---- */
+.section--dark {
+  background: var(--c-black);
+  color: var(--c-on-dark);
+}
+
+/* ---- Page offset for the fixed header (all pages except the hero home) ---- */
+.page {
+  padding-top: var(--header-h);
+}
+
+.page-lead {
+  padding-top: calc(var(--header-h) + clamp(2.5rem, 7vw, 6rem));
+  padding-bottom: clamp(2.5rem, 6vw, 4.5rem);
+}

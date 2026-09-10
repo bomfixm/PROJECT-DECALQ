@@ -1,0 +1,116 @@
+.wrap {
+  width: 100%;
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.handle {
+  font-size: var(--fs-h3);
+  letter-spacing: var(--tracking-tight);
+  text-transform: uppercase;
+}
+
+.follow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--c-ink-2);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.follow:hover {
+  color: var(--c-ink);
+}
+
+.rail {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--grid-gap);
+}
+
+.cell {
+  min-width: 0;
+}
+
+.link {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--c-bg-alt);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 900ms var(--ease-out);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.3rem;
+  padding: 0.9rem;
+  font-size: var(--fs-overline);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.55), rgba(10, 10, 10, 0) 55%);
+  opacity: 0;
+  transition: opacity var(--dur-mid) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .link:hover .img {
+    transform: scale(1.05);
+  }
+
+  .link:hover .overlay {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .rail {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin-inline: calc(var(--gutter) * -1);
+    padding-inline: var(--gutter);
+    scrollbar-width: none;
+  }
+
+  .rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cell {
+    flex: 0 0 62%;
+    scroll-snap-align: start;
+  }
+
+  .overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0) 45%);
+  }
+}
+
+@media (max-width: 560px) {
+  .cell {
+    flex-basis: 78%;
+  }
+}

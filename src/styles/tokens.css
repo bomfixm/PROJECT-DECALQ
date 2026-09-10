@@ -1,0 +1,86 @@
+/* ============================================================
+   DECALQ — Design tokens
+   Palette: off-white base, near-black ink, hairline greys.
+   Colour is deliberately absent so photography leads.
+   ============================================================ */
+
+:root {
+  /* ---- Colour ---- */
+  --c-bg: #fbfbfa;
+  --c-bg-alt: #f2f2f0; /* light grey section */
+  --c-surface: #ffffff;
+  --c-ink: #0e0e0e; /* primary text / buttons */
+  --c-ink-2: #5c5c5a; /* secondary text */
+  --c-ink-3: #8f8f8c; /* tertiary / meta */
+  --c-line: #e4e4e1; /* hairline borders */
+  --c-line-strong: #d2d2ce;
+  --c-black: #0a0a0a; /* dark sections / footer */
+  --c-on-dark: #f4f4f2;
+  --c-on-dark-2: #a3a3a0;
+  --c-focus: #0e0e0e;
+
+  /* ---- Typography ---- */
+  --font-sans: 'Inter Variable', 'Inter', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Helvetica, Arial, sans-serif;
+
+  --fs-overline: 0.6875rem; /* 11px */
+  --fs-xs: 0.75rem; /* 12px */
+  --fs-sm: 0.8125rem; /* 13px */
+  --fs-base: 1rem; /* 16px */
+  --fs-md: 1.0625rem; /* 17px */
+  --fs-lg: clamp(1.25rem, 1.6vw, 1.5rem);
+  --fs-h3: clamp(1.375rem, 2.4vw, 1.9rem);
+  --fs-h2: clamp(2rem, 5vw, 3.75rem);
+  --fs-h1: clamp(2.75rem, 8vw, 6rem);
+  --fs-display: clamp(3.25rem, 13vw, 11rem);
+
+  --lh-tight: 1.02;
+  --lh-snug: 1.14;
+  --lh-body: 1.6;
+
+  --tracking-overline: 0.16em;
+  --tracking-label: 0.08em;
+  --tracking-tight: -0.02em;
+  --tracking-tighter: -0.035em;
+
+  /* ---- Spacing ---- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+
+  --section-y: clamp(4.5rem, 11vw, 10rem);
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --page-max: 1680px;
+  --grid-gap: clamp(0.5rem, 1.4vw, 1.25rem);
+
+  /* ---- Header ---- */
+  --header-h: 68px;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.76, 0, 0.24, 1);
+  --dur-fast: 180ms;
+  --dur-mid: 320ms;
+  --dur-slow: 560ms;
+
+  /* ---- Z-index scale ---- */
+  --z-header: 100;
+  --z-overlay: 400;
+  --z-drawer: 500;
+  --z-menu: 600;
+
+  --radius: 0px;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --header-h: 60px;
+  }
+}

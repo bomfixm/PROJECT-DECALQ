@@ -1,0 +1,38 @@
+.wrap {
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+}
+
+.tag {
+  font-size: var(--fs-overline);
+  letter-spacing: var(--tracking-overline);
+  text-transform: uppercase;
+  color: var(--c-ink-2);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: var(--fs-h1);
+  letter-spacing: var(--tracking-tighter);
+  text-transform: uppercase;
+  line-height: 0.95;
+  max-width: 16ch;
+}
+
+.text {
+  margin-top: 1.25rem;
+  max-width: 44ch;
+  font-size: var(--fs-md);
+  color: var(--c-ink-2);
+}
+
+.link {
+  display: inline-block;
+  margin-top: 2rem;
+  border-bottom: 1px solid var(--c-ink);
+  padding-bottom: 0.3rem;
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}

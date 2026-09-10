@@ -1,0 +1,29 @@
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--c-line-strong);
+}
+
+.btn {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  color: var(--c-ink);
+  transition: background var(--dur-fast) var(--ease-out);
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--c-bg-alt);
+}
+
+.btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.value {
+  min-width: 34px;
+  text-align: center;
+  font-size: var(--fs-sm);
+}

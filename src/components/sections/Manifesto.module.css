@@ -1,0 +1,39 @@
+.section {
+  overflow: hidden;
+}
+
+.overline {
+  font-size: var(--fs-overline);
+  letter-spacing: var(--tracking-overline);
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--c-on-dark-2);
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.statement {
+  font-size: clamp(1.75rem, 5vw, 3.75rem);
+  line-height: 1.04;
+  letter-spacing: var(--tracking-tight);
+  text-transform: uppercase;
+  font-weight: 500;
+  max-width: 20ch;
+}
+
+.lineMask {
+  display: block;
+  overflow: hidden;
+  padding-block: 0.04em;
+}
+
+.line {
+  display: block;
+}
+
+.body {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  max-width: 46ch;
+  font-size: var(--fs-md);
+  line-height: 1.65;
+  color: var(--c-on-dark-2);
+}

@@ -1,0 +1,118 @@
+.btn {
+  --bg: var(--c-ink);
+  --fg: var(--c-bg);
+  --bd: var(--c-ink);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7em;
+  min-height: 48px;
+  padding: 0 1.75rem;
+  background: var(--bg);
+  color: var(--fg);
+  border: 1px solid var(--bd);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    background var(--dur-mid) var(--ease-out),
+    color var(--dur-mid) var(--ease-out),
+    border-color var(--dur-mid) var(--ease-out);
+}
+
+.btn:hover {
+  background: #262624;
+  border-color: #262624;
+}
+
+.btn .arrow {
+  transition: transform var(--dur-mid) var(--ease-out);
+}
+
+.btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ---- Variants ---- */
+.outline {
+  --bg: transparent;
+  --fg: var(--c-ink);
+  --bd: var(--c-line-strong);
+}
+
+.outline:hover {
+  background: var(--c-ink);
+  color: var(--c-bg);
+  border-color: var(--c-ink);
+}
+
+.ghost {
+  --bg: transparent;
+  --fg: var(--c-ink);
+  --bd: transparent;
+  min-height: auto;
+  padding: 0.35rem 0;
+  gap: 0.55em;
+}
+
+.ghost:hover {
+  background: transparent;
+  border-color: transparent;
+}
+
+.ghost .label {
+  position: relative;
+}
+
+.ghost .label::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-mid) var(--ease-out);
+}
+
+.ghost:hover .label::after {
+  transform: scaleX(1);
+}
+
+/* ---- Sizes ---- */
+.sm {
+  min-height: 42px;
+  padding: 0 1.25rem;
+  font-size: var(--fs-xs);
+}
+
+.lg {
+  min-height: 54px;
+  padding: 0 2.25rem;
+}
+
+/* On dark backgrounds */
+:global(.on-dark) .btn.solid {
+  --bg: var(--c-bg);
+  --fg: var(--c-ink);
+  --bd: var(--c-bg);
+}
+
+:global(.on-dark) .btn.solid:hover {
+  background: #d9d9d5;
+  border-color: #d9d9d5;
+}
+
+:global(.on-dark) .btn.outline {
+  --fg: var(--c-on-dark);
+  --bd: rgba(244, 244, 242, 0.32);
+}
+
+:global(.on-dark) .btn.ghost {
+  --fg: var(--c-on-dark);
+}

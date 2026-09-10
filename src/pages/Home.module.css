@@ -1,0 +1,4 @@
+.drop {
+  padding-top: clamp(6rem, 15vw, 12rem);
+  padding-bottom: var(--section-y);
+}
