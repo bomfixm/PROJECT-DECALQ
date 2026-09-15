@@ -1,7 +1,7 @@
 .btn {
-  --bg: var(--c-ink);
-  --fg: var(--c-bg);
-  --bd: var(--c-ink);
+  --bg: var(--c-accent);
+  --fg: var(--c-on-accent);
+  --bd: var(--c-accent);
 
   display: inline-flex;
   align-items: center;
@@ -24,8 +24,8 @@
 }
 
 .btn:hover {
-  background: #262624;
-  border-color: #262624;
+  background: var(--c-accent-strong);
+  border-color: var(--c-accent-strong);
 }
 
 .btn .arrow {
@@ -44,9 +44,9 @@
 }
 
 .outline:hover {
-  background: var(--c-ink);
-  color: var(--c-bg);
-  border-color: var(--c-ink);
+  background: var(--c-accent);
+  color: var(--c-on-accent);
+  border-color: var(--c-accent);
 }
 
 .ghost {
@@ -96,18 +96,7 @@
   padding: 0 2.25rem;
 }
 
-/* On dark backgrounds */
-:global(.on-dark) .btn.solid {
-  --bg: var(--c-bg);
-  --fg: var(--c-ink);
-  --bd: var(--c-bg);
-}
-
-:global(.on-dark) .btn.solid:hover {
-  background: #d9d9d5;
-  border-color: #d9d9d5;
-}
-
+/* On dark backgrounds — the accent already reads well on black, keep it */
 :global(.on-dark) .btn.outline {
   --fg: var(--c-on-dark);
   --bd: rgba(244, 244, 242, 0.32);

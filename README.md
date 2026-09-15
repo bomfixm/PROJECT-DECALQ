@@ -3,9 +3,11 @@
 Loja streetwear da **DECALQ®**. Front-end completo em **React + Vite**, sem back-end:
 carrinho, busca e navegação rodam 100% no cliente com dados fictícios.
 
-Estética: minimalismo premium + editorial de moda. Preto / branco / cinza, tipografia
-grande, muito espaço negativo. O "street" aparece na direção de arte, no texto e nas
-microinterações — não em ruído visual.
+Estética: minimalismo premium + editorial de moda. Base preto / branco / cinza +
+**rosa da marca** (`#e01a78`, o mesmo da estampa) como cor de destaque — botões
+principais, foco, tag "Novo", seleção de texto. Tipografia grande, muito espaço
+negativo. O "street" aparece na direção de arte, no texto e nas microinterações —
+não em ruído visual.
 
 ---
 
@@ -85,9 +87,15 @@ arquivos de dados. Basta substituir os arquivos mantendo o nome (ou editar o cam
 | Instagram | `instagram-01.jpg` … `instagram-06.jpg` | `src/data/site.js` → `instagramFeed` |
 | Sobre | reusa `editorial-01.jpg` | `src/pages/About.jsx` |
 
-Proporções usadas: hero ≈ 16:10, produtos 4:5, categorias 3:4, Instagram 1:1,
+Proporções usadas: **hero ≈ 2,6:1** (faixa de campanha, tipo banner largo — os
+placeholders são 2600×1000), produtos 4:5, categorias 3:4, Instagram 1:1,
 editorial 16:9. Todas com `object-fit: cover`, então qualquer proporção funciona —
 essas só evitam corte estranho.
+
+A proporção do hero é a variável `--hero-ratio` em
+`src/components/hero/HeroSlider.module.css` (padrão `13 / 5`); em telas ≤ 900px ele
+vira um bloco mais alto automaticamente. A cor de destaque é `--c-accent` em
+`src/styles/tokens.css`.
 
 Os placeholders atuais foram gerados em tom de cinza para não competir com o layout.
 

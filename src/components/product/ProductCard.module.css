@@ -79,8 +79,8 @@
   bottom: 0.7rem;
   left: 0.7rem;
   padding: 0.28rem 0.55rem;
-  background: var(--c-ink);
-  color: var(--c-bg);
+  background: var(--c-accent);
+  color: var(--c-on-accent);
   font-size: 9px;
   letter-spacing: 0.14em;
   text-transform: uppercase;

@@ -104,6 +104,10 @@
   transform: scaleX(1);
 }
 
+.navLink.active::after {
+  background: var(--c-accent);
+}
+
 /* ---- Right actions ---- */
 .actions {
   display: flex;

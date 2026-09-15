@@ -186,8 +186,8 @@
   justify-content: center;
   gap: 0.6rem;
   min-height: 52px;
-  background: var(--c-ink);
-  color: var(--c-bg);
+  background: var(--c-accent);
+  color: var(--c-on-accent);
   font-size: var(--fs-sm);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
@@ -195,7 +195,7 @@
 }
 
 .checkout:hover {
-  background: #262624;
+  background: var(--c-accent-strong);
 }
 
 .checkout svg {

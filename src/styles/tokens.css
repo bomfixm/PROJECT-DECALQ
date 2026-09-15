@@ -17,7 +17,14 @@
   --c-black: #0a0a0a; /* dark sections / footer */
   --c-on-dark: #f4f4f2;
   --c-on-dark-2: #a3a3a0;
-  --c-focus: #0e0e0e;
+
+  /* ---- Brand accent (screenprint pink) ---- */
+  --c-accent: #e01a78; /* AA against both white and black (~4.6:1) */
+  --c-accent-strong: #c4106a; /* hover / pressed */
+  --c-accent-tint: #fdeef5; /* faint pink wash for backgrounds */
+  --c-on-accent: #ffffff;
+
+  --c-focus: var(--c-accent);
 
   /* ---- Typography ---- */
   --font-sans: 'Inter Variable', 'Inter', -apple-system, BlinkMacSystemFont,

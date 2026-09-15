@@ -95,7 +95,7 @@
 }
 
 .msgDone {
-  color: var(--c-ink);
+  color: var(--c-accent);
 }
 
 @media (max-width: 820px) {

@@ -74,8 +74,8 @@ ol {
 }
 
 ::selection {
-  background: var(--c-ink);
-  color: var(--c-bg);
+  background: var(--c-accent);
+  color: var(--c-on-accent);
 }
 
 @media (prefers-reduced-motion: reduce) {
